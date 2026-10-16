@@ -2,7 +2,7 @@
 
 **A work-item coordination app for teams handling operational requests.**
 
-OpsBoard replaces scattered chat messages, spreadsheets and email threads with a single system where every request has an owner, a status, a priority and a complete history. It was built for the *Newtonite Software Engineering Challenge — Operations Under Pressure*.
+OnBoard replaces scattered chat messages, spreadsheets and email threads with a single system where every request has an owner, a status, a priority and a complete history. It was built for the *Newtonite Software Engineering Challenge — Operations Under Pressure*.
 
 ---
 

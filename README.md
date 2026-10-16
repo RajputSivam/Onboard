@@ -1,4 +1,4 @@
-# OpsBoard
+# OnBoard
 
 **A work-item coordination app for teams handling operational requests.**
 

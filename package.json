@@ -1,0 +1,14 @@
+{
+  "name": "opsboard",
+  "version": "1.0.0",
+  "description": "Operations Under Pressure - internal work-item coordination app",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed:bulk": "node src/seed.js --bulk 20000",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT",
+  "dependencies": { "better-sqlite3": "^13.0.3", "express": "^5.3.0" }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpsBoard</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<section id="login" hidden>
+  <form id="loginForm" class="card login">
+    <h1>OpsBoard</h1><p class="muted">Operational work, in one place.</p>
+    <input name="email" type="email" placeholder="email" value="bob@example.com" required>
+    <input name="password" type="password" placeholder="password" value="password" required>
+    <button class="primary">Sign in</button><div id="loginErr" class="err"></div>
+    <p class="muted small">Demo: alice (admin) · bob (lead, Eng) · carol (member Eng / lead Payments) · dave (Support) · erin (viewer) · frank — all <code>@example.com</code> / <code>password</code></p>
+  </form>
+</section>
+<div id="app" hidden>
+  <header>
+    <b>OpsBoard</b><span id="live" class="dot" title="realtime"></span>
+    <span class="spacer"></span>
+    <button id="newBtn" class="primary">+ New item</button>
+    <div class="bell"><button id="bellBtn">🔔 <span id="unread" class="badge" hidden>0</span></button><div id="notifs" class="pop" hidden></div></div>
+    <span id="me" class="muted"></span><button id="logout">Sign out</button>
+  </header>
+  <main>
+    <aside><div id="dash"></div>
+      <h4>Filters</h4>
+      <input id="q" placeholder="Search title / description…">
+      <select id="fTeam"></select>
+      <select id="fStatus"><option value="">Any status</option><option value="open">Open</option><option value="in_progress">In progress</option><option value="pending_approval">Pending approval</option><option value="resolved">Resolved</option><option value="closed">Closed</option></select>
+      <select id="fPrio"><option value="">Any priority</option><option value="4">Urgent</option><option value="3">High</option><option value="2">Medium</option><option value="1">Low</option></select>
+      <select id="fAssignee"><option value="">Anyone</option><option value="me">Assigned to me</option><option value="none">Unassigned</option></select>
+      <button id="clear">Clear filters</button>
+    </aside>
+    <section id="listPane"><div id="banner" class="banner" hidden></div><div id="list"></div></section>
+    <section id="detail" class="card"><p class="muted">Select an item.</p></section>
+  </main>
+</div>
+<div id="modal" class="modal" hidden></div><div id="toast" class="toast" hidden></div>
+<script src="app.js"></script></body></html>
